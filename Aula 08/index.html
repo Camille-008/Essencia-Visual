@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <title>Minhas Obras de Arte</title>
+ <link rel="stylesheet" href="css.css" />
+ <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body id="inicio">
+
+
+ <!-- Navbar -->
+ <nav class="navbar">
+   <div class="nav-container">
+     <img src="img/logotipo.png" width="250px" height="70px">
+     <ul class="nav-menu">
+       <li><a href="#inicio">Início</a></li>
+       <li><a href="#galeria">Galeria</a></li>
+     </ul>
+   </div>
+ </nav>
+
+
+ <!-- Carrossel -->
+   <h2 class="section-title">Destaques</h2>
+    <ul class="slider">
+    <li>
+      <input type="radio" id="slide1" name="slide" checked>
+      <label for="slide1"></label>
+      <img src="img/noiteE.jpg" alt="Imagem 1" />
+    </li>
+    <li>
+      <input type="radio" id="slide2" name="slide">
+      <label for="slide2"></label>
+      <img src="img/img1_cm.jpg" alt="Imagem 2" />
+    </li>
+    <li>
+      <input type="radio" id="slide3" name="slide">
+      <label for="slide3"></label>
+      <img src="img/acimaP.jpg" alt="Imagem 3" />
+    </li>
+  </ul>
+  <script>
+    // Seleciona todos os inputs do tipo radio dentro do carrossel
+    const slides = document.querySelectorAll('.slider input[name="slide"]');
+    let current = 0; // índice do slide atual
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+      // Remove o checked do atual
+      slides[current].checked = false;
+      // Incrementa o índice, voltando ao 0 se passar do último
+      current = (current + 1) % totalSlides;
+      // Marca o próximo slide como checked
+      slides[current].checked = true;
+    }
+
+    // Troca o slide a cada 3 segundos (3000 ms)
+    setInterval(nextSlide, 3000);
+  </script>
+
+ <!-- Galeria de Obras -->
+ <section id="galeria" class="gallery-section">
+   <h2 class="section-title">Galeria de Obras</h2>
+
+
+   <!-- Coleção 1 -->
+   <div class="artist-card">
+    <img src="img/Vincent_van_Gogh.jpg" alt="Vincent van Gogh" class="artist-photo">
+    <div class="artist-info">
+      <h3>Vincent van Gogh</h3>
+      <p>Vincent van Gogh foi um pintor pós-impressionista holandês, nascido em 1853. É conhecido por suas obras vibrantes, com pinceladas expressivas e cores intensas, que influenciaram profundamente a arte moderna. Apesar de ter produzido mais de 2.000 obras, incluindo famosos quadros como A Noite Estrelada e Girassóis, Van Gogh teve pouco reconhecimento em vida e enfrentou graves problemas de saúde mental. Morreu em 1890, aos 37 anos. Hoje, é considerado um dos maiores gênios da história da arte.</p>
+    </div>
+  </div>
+   <div class="gallery-row">
+     <div class="artwork">
+       <img src="img/img1_vgg.jpg" alt="Obra 1">
+       <h4>Campo de Trigo com Ciprestes (1889)</h4>
+       <p>Paisagem dourada com trigo, céu em movimento e ciprestes ao vento, unindo energia e serenidade.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img2_vgg.jpg" alt="Obra 2">
+       <h4>O Jardim de Daubigny (1890)</h4>
+       <p>Jardim florido em tons suaves de verde e lilás, evocando silêncio e recolhimento.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img3_vgg.jpg" alt="Obra 3">
+       <h4> A Casa Branca à Noite (1890)</h4>
+       <p>Cena noturna em tons azulados, com casa iluminada que transmite calma e intimidade.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img4_vgg.jpg" alt="Obra 4">
+       <h4>A Vinha Encarnada (1888)</h4>
+       <p>Trabalhadores na colheita ao entardecer, com cores quentes e atmosfera de harmonia com a natureza.</p>
+     </div>
+   </div>
+
+
+   <!-- Coleção 2 -->
+   <div class="artist-card">
+    <img src="img/Claude_Monet.jpg" alt="Claude Monet" class="artist-photo">
+    <div class="artist-info">
+      <h3>Claude Monet</h3>
+      <p>Claude Monet foi um pintor francês e um dos principais nomes do movimento impressionista, nascido em 1840. Sua obra buscava capturar a luz, as cores e as sensações momentâneas da natureza, usando pinceladas soltas e uma paleta vibrante. Monet é especialmente conhecido por suas séries de pinturas como As Ninféias, Catedral de Rouen e Impressão, nascer do sol — que deu nome ao Impressionismo. Ele passou os últimos anos de vida pintando seu jardim em Giverny, onde morreu em 1926. Seu legado influenciou profundamente a arte moderna.</p>
+    </div>
+  </div>
+   <div class="gallery-row">
+     <div class="artwork">
+       <img src="img/img1_cm.jpg" alt="Obra 5">
+       <h4> Impressão, nascer do sol (1872)</h4>
+       <p>Porto de Le Havre ao amanhecer, com céu enevoado e reflexos no mar, marcando o início do impressionismo.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img2_cm.jpg" alt="Obra 6">
+       <h4>Mulher com Sombrinha (1875)</h4>
+       <p>Camille e Jean ao ar livre, com vento e luz filtrada, transmitindo leveza e frescor do momento.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img3_cm.jpg" alt="Obra 7">
+       <h4>Praia em Pourville (1882)</h4>
+       <p>Costa da Normandia sob céu nublado e mar calmo, destacando luz natural e movimento suave das águas.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img4_cm.jpg" alt="Obra 8">
+       <h4>A Lagoa de Lírios d’Água (1899)</h4>
+       <p> Lagoa de Giverny com lírios e reflexos, quase abstrata, explorando luz, cor e reflexos no fim da carreira de Monet.</p>
+     </div>
+   </div>
+
+
+   <!-- Coleção 3 -->
+   <div class="artist-card">
+    <img src="img/Isaac_Levitan.jpg" alt="Isaac Levitan" class="artist-photo">
+    <div class="artist-info">
+      <h3>Isaac Levitan</h3>
+      <p>Isaac Levitan foi um importante pintor russo do século XIX, nascido em 1860, conhecido por suas paisagens poéticas e emotivas. Suas obras retratam com grande sensibilidade a natureza da Rússia, combinando realismo com lirismo. Levitan capturava não apenas a aparência das paisagens, mas também seus sentimentos e atmosferas, o que o tornou um dos mestres da "paisagem de estado de alma". Entre suas obras mais famosas estão Acima da paz eterna e Outono Dourado. Morreu jovem, em 1900, mas deixou um legado duradouro na pintura russa.</p>
+    </div>
+  </div>
+   <div class="gallery-row">
+     <div class="artwork">
+       <img src="img/img1_il.jpeg" alt="Obra 9">
+       <h4>O Lago (1880)</h4>
+       <p> Lago sereno com reflexos do céu e árvores, onde cisnes deslizam criando atmosfera tranquila.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img2_il.jpg" alt="Obra 10">
+       <h4>Outono Dourado (1895)</h4>
+       <p>Floresta iluminada por folhas douradas sob céu escuro, refletindo beleza e melancolia.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img3_il.jpg" alt="Obra 11">
+       <h4>Primavera. Grande Água (1897)</h4>
+       <p>Campo alagado com árvores submersas e reflexos, transmitindo frescor e renovação.</p>
+     </div>
+     <div class="artwork">
+       <img src="img/img4_il.jpg" alt="Obra 12">
+       <h4>Silêncio (1898)</h4>
+       <p>Um rio parado sob o céu noturno, cercado por árvores e sombras profundas. A obra expressa a paz profunda e introspecção.</p>
+     </div>
+   </div>
+ </section>
+
+
+ <!-- Rodapé -->
+ <footer class="footer">
+   <p>&copy; 2025 Minhas Obras de Arte. Todos os direitos reservados.</p>
+ </footer>
+
+
+ <!-- Botão Voltar ao Topo -->
+ <button id="backToTop" class="back-to-top">
+   ↑
+ </button>
+
+
+ <script src="script.js"></script>
+</body>
+</html>
+
+
+
